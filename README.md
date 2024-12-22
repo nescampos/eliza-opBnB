@@ -1,18 +1,13 @@
-# Eliza Mode Example
-*with GOAT 🐐*
+# Eliza opBnB
 
-This fork is a **simplified example of Eliza focused on executing transactions onchain on Mode** using [GOAT](https://github.com/goat-sdk/goat-sdk). It's designed specifically for Mode, focusing on agents that handle complex onchain tasks. By using GOAT for all onchain functionality, this version removes unnecessary plugins for other blockchains and introduces a simpler character to start with that is tailored to doing actions on Mode.
+This is a small demo of Eliza to run onchain activities on opBnB network using [GOAT](https://github.com/goat-sdk/goat-sdk). It's designed specifically for opBnB, focusing on agents that handle complex onchain tasks. By using GOAT for all onchain functionality, this version removes unnecessary plugins for other blockchains and introduces a simpler character to start with that is tailored to doing actions on opBnB.
 
 **Onchain actions**: Mint NFTs, check the latest trending tokens, purchase, trade them, and much more.
 
 Tech stack:
 - [Eliza](https://github.com/ai16z/eliza) - The AI agent framework
 - [GOAT](https://github.com/goat-sdk/goat-sdk) - The open-source framework for connecting AI agents to any onchain app
-- [Mode](https://mode.network) - The L2
-
-**Support**
-- [Discord](https://discord.gg/goat-sdk)
-
+- [opBnB](https://opbnb.bnbchain.org/en) - The L2
 
 ## Running the project
 ### Requirements
@@ -22,12 +17,12 @@ Tech stack:
 
 1. Clone the repository
 ```bash
-git clone https://github.com/goat-sdk/eliza-mode-example.git
+git clone https://github.com/nescampos/eliza-opBnB.git
 ```
 
 2. Go into the project directory
 ```bash
-cd eliza-mode-example
+cd eliza-opBnB
 ```
 
 3. Install the dependencies
@@ -48,18 +43,18 @@ cp .env.example .env
 
 1. This example uses a key pair wallet to connect to Mode. Save the key and fill in the following in the .env file:
     - `EVM_PRIVATE_KEY=your_private_key`
-    - `EVM_PROVIDER_URL=https://mainnet.mode.network/` (more on Mode RPCs [here](https://docs.mode.network/docs/rpc-endpoints))
+    - `EVM_PROVIDER_URL=https://opbnb-mainnet-rpc.bnbchain.org`
 
 ### Running the agent
 
-1. You can now run the agent with the command `pnpm start --character="characters/mode-hacker.character.json"`
+1. You can now run the agent with the command `pnpm start --character="characters/opBnB-agent.character.json"`
 2. In a different terminal run `pnpm start:client` to start the chat interface
 3. Go to `http://localhost:5173` to chat with your agent
 
 
 ## Configuring the project
 ### The character
-- You can see the definition of your character in the `characters/mode-hacker.character.json` file.
+- You can see the definition of your character in the `characters/opBnB-agent.character.json` file.
 - This project gives you a simple example character to get you started. This allows you to easily add onchain actions and test them out while increasing the complexity of your agent step by step. Keep adding and modifying the bio and tone of the character to make it your own.
 
 ### Eliza
